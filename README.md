@@ -7,13 +7,13 @@ In computer science, a data structure is a data organization, management, and st
 ### Big O Notation
 Before we dive into implementing Data Structures we should be familiar with BigO notations which is used to measure the runtime complexity of an algorithm. 
 It is really important to understand the BigO concepts for the coding interviews. Make sure you familiarize yourself by calculating BigO runtime for various code examples. 
-<b>Definition:</b> BigO represents the runtime complexity of an algorithm. Big O notation defines how time scales with respect to the input variables. 
+<br><br><b>Definition:</b> BigO represents the runtime complexity of an algorithm. Big O notation defines how time scales with respect to the input variables. 
 
 For example: `O(log n)` <br>
     Where `O` represents the growth rate and `log n` is the math function where `n` is the input.
     
 
-Keep in mind the following rules while determining the runtime for an algorithm:
+##### Keep in mind the following rules while determining the runtime for an algorithm:
 
 - Drop any constant in BigO. eg. ``O(2n) = O(n)``
 - Add different steps
@@ -30,6 +30,7 @@ fun findCommon(list1, list2) {
         for(j in list2) {
             if (i == j) {
                 commons.add(i)
+                break;
             }
         }
     }
@@ -39,6 +40,18 @@ fun findCommon(list1, list2) {
 ```
 - only consider dominant terms in the runtime calculation. Eg. O(n<sup>3</sup> + n<sup>2</sup>) becomes O(n<sup>3</sup>)
    
+
+##### Common Runtime complexities
+
+|             | Complexity      | Example                                                |
+|-------------|-----------------|--------------------------------------------------------|
+| Constant    | O(1)            | Accessing a variable directly.                         |
+| Logarithmic | O(log n)        | Binary Search for an element in a sorted list.         |
+| Linear      | O(n)            | Looping through n elements.                            |
+| Quadratic   | O(n<sup>2</sup>)| Loop nested in another loop.                           |
+| Exponential | O(x<sup>n</sup>)| Recursive computation of fibonacci                     |
+| Factorial   | O(n!)           | Looping over n and recursive calls to n-1 in the loop. |
+
 
 
 
